@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ruksana Medical Trust — A premier multi-speciality hospital delivering world-class healthcare with experienced doctors, advanced technology and compassionate care." />
+  <meta name="keywords" content="hospital, multi-speciality, cardiology, orthopedics, neurology, healthcare, Ruksana Medical Trust" />
+  <meta property="og:title" content="Ruksana Medical Trust | Your Health, Our Priority" />
+  <meta property="og:description" content="World-class healthcare with experienced doctors, advanced technology and compassionate care." />
+  <meta property="og:type" content="website" />
+  <title>Ruksana Medical Trust | Your Health, Our Priority</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- ─── Loading Screen ──────────────────────────────────── -->
+<div id="loading-screen">
+  <div class="loader-logo">Ruksana <span>Medical</span> Trust</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ─── Toast Container ─────────────────────────────────── -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- ─── Search Overlay ──────────────────────────────────── -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search">
+  <button id="search-close" class="search-close" aria-label="Close search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="search-overlay-inner">
+    <h2 class="search-overlay-title">Search Doctors & Departments</h2>
+    <div class="search-overlay-input">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="search-input" type="text" placeholder="Search by doctor name, specialization, department..." autocomplete="off" />
+    </div>
+    <p style="text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:1rem;font-family:var(--font-secondary)">Press <kbd style="background:rgba(255,255,255,0.1);padding:2px 8px;border-radius:4px">ESC</kbd> to close</p>
+  </div>
+</div>
+
+<!-- ─── Nav Overlay ──────────────────────────────────────── -->
+<div id="nav-overlay" class="nav-overlay-bg"></div>
+
+<!-- ─── Navbar ───────────────────────────────────────────── -->
+<nav id="navbar" class="transparent" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Ruksana Medical Trust Home">
+        <div class="nav-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Ruksana Medical Trust</span>
+          <span class="nav-logo-tagline">Your Health, Our Priority</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="pages/about.html" class="nav-link">About</a></li>
+        <li class="nav-item nav-item">
+          <a href="pages/departments.html" class="nav-link">
+            Departments
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="pages/departments.html#cardiology"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65L12 21.23l8.42-8.42a5.4 5.4 0 0 0 0-7.23z"/></svg>Cardiology</a>
+            <a href="pages/departments.html#neurology"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Neurology</a>
+            <a href="pages/departments.html#orthopedics"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg>Orthopedics</a>
+            <a href="pages/departments.html#oncology"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Oncology</a>
+            <a href="pages/departments.html">View All Departments →</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="pages/doctors.html" class="nav-link">Doctors</a></li>
+        <li class="nav-item"><a href="pages/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="pages/faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="search-btn" class="nav-search-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button id="dark-mode-toggle" class="nav-dark-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="pages/appointment.html" class="btn btn-accent btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Appointment
+        </a>
+        <button id="hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ─── Mobile Nav ────────────────────────────────────────── -->
+<div id="mobile-nav" class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <div class="nav-mobile-header">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name" style="color:var(--text-primary)">Ruksana Medical</span>
+        <span class="nav-logo-tagline" style="color:var(--text-muted)">Your Health, Our Priority</span>
+      </div>
+    </a>
+    <button id="mobile-nav-close" class="nav-mobile-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile-links">
+    <a href="index.html" class="active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a>
+    <a href="pages/about.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>About</a>
+    <a href="pages/doctors.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Doctors</a>
+    <a href="pages/departments.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Departments</a>
+    <a href="pages/services.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Services</a>
+    <a href="pages/faq.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</a>
+    <a href="pages/contact.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Contact</a>
+  </nav>
+  <div class="nav-mobile-footer">
+    <a href="pages/appointment.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Appointment
+    </a>
+    <a href="tel:+911800000000" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--border);color:var(--text-secondary)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Emergency: 1800-000-0000
+    </a>
+    <div style="display:flex;align-items:center;justify-content:center;gap:1rem">
+      <button id="dark-mode-toggle-mobile" class="nav-dark-toggle" style="background:var(--bg-alt);border-color:var(--border);color:var(--text-primary)" aria-label="Toggle dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-secondary)">Toggle Dark Mode</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HERO SECTION ──────────────────────────────────────── -->
+<section id="hero" aria-label="Hero Banner">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          India's Premier Multi-Speciality Hospital
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-line">Advanced Healthcare</span>
+          <span class="hero-title-line">for <span class="highlight">Every</span></span>
+          <span class="hero-title-line">Generation</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Ruksana Medical Trust delivers world-class healthcare with experienced doctors, advanced technology and compassionate care — putting your health first, always.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="pages/appointment.html" class="btn btn-accent btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Appointment
+          </a>
+          <a href="pages/about.html" class="btn btn-glass btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Learn More
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">200<span>+</span></span>
+            <span class="hero-stat-label">Expert Doctors</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">50<span>K+</span></span>
+            <span class="hero-stat-label">Happy Patients</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">25<span>+</span></span>
+            <span class="hero-stat-label">Specialities</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">24<span>/7</span></span>
+            <span class="hero-stat-label">Emergency Care</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Doctor Card -->
+      <div class="hero-card-wrapper">
+        <div class="hero-doctor-card">
+          <div class="hero-card-header">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=face" alt="Dr. Arjun Sharma" class="hero-card-img" loading="lazy" />
+            <div class="hero-card-info">
+              <div class="hero-card-name">Dr. Arjun Sharma</div>
+              <div class="hero-card-spec">Senior Cardiologist</div>
+              <div class="hero-card-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.9 (1,247 reviews)</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-details">
+            <div class="hero-card-detail">
+              <span class="hero-card-detail-val">22+</span>
+              <span class="hero-card-detail-key">Years Exp.</span>
+            </div>
+            <div class="hero-card-detail">
+              <span class="hero-card-detail-val">MBBS, MD</span>
+              <span class="hero-card-detail-key">Qualification</span>
+            </div>
+            <div class="hero-card-detail">
+              <span class="hero-card-detail-val">15K+</span>
+              <span class="hero-card-detail-key">Surgeries</span>
+            </div>
+            <div class="hero-card-detail">
+              <span class="hero-card-detail-val">AIIMS</span>
+              <span class="hero-card-detail-key">Trained At</span>
+            </div>
+          </div>
+          <div class="hero-card-availability">
+            <span class="availability-dot"></span>
+            <span class="availability-text">Available Today</span>
+            <span style="color:rgba(255,255,255,0.6);font-size:0.75rem">Mon–Sat, 9–5 PM</span>
+          </div>
+          <a href="pages/appointment.html" class="hero-card-btn">Book Consultation</a>
+        </div>
+
+        <!-- Mini floating cards -->
+        <div class="hero-mini-card card-1">
+          <div class="mini-card-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <div class="mini-card-val">99.2%</div>
+            <div class="mini-card-label">Success Rate</div>
+          </div>
+        </div>
+
+        <div class="hero-mini-card card-2">
+          <div class="mini-card-icon blue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="mini-card-val">50,000+</div>
+            <div class="mini-card-label">Patients Treated</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span class="scroll-indicator-text">Scroll</span>
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─────────────────────────────────────── -->
+<section id="why-choose-us" class="section" aria-label="Why Choose Ruksana Medical Trust">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Why Choose Us
+      </span>
+      <h2 class="section-title">Excellence in Every <span>Aspect of Care</span></h2>
+      <p class="section-subtitle">We combine cutting-edge technology, expert physicians and heartfelt compassion to deliver healthcare that transforms lives.</p>
+    </div>
+
+    <div class="why-grid stagger">
+      <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="why-icon icon-blue">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Expert Medical Team</h3>
+        <p>200+ highly qualified doctors with decades of experience across 25+ specialities, trained at India's top institutions.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-icon icon-green">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Advanced Technology</h3>
+        <p>State-of-the-art medical equipment including 3T MRI, PET-CT, Robotic Surgery and AI-powered diagnostic systems.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-icon icon-purple">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65L12 21.23l8.42-8.42a5.4 5.4 0 0 0 0-7.23z"/></svg>
+        </div>
+        <h3>Patient-First Approach</h3>
+        <p>Every decision is centred around patient wellbeing. We treat not just the condition, but the whole person with dignity.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-icon icon-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>24/7 Emergency Care</h3>
+        <p>Round-the-clock emergency services with dedicated trauma centres and rapid response teams, ready every moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DEPARTMENTS ───────────────────────────────────────── -->
+<section id="departments" class="section" aria-label="Our Departments">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Our Specialities
+      </span>
+      <h2 class="section-title">World-Class <span>Departments</span></h2>
+      <p class="section-subtitle">From primary care to highly specialised surgeries, our departments cover every aspect of your healthcare journey.</p>
+    </div>
+
+    <div class="dept-grid stagger">
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="dept-icon icon-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65L12 21.23l8.42-8.42a5.4 5.4 0 0 0 0-7.23z"/></svg></div>
+        <div class="dept-name">Cardiology</div>
+        <div class="dept-desc">Advanced cardiac care with minimally invasive procedures</div>
+        <span class="dept-count badge badge-primary">12 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="dept-icon icon-purple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="dept-name">Neurology</div>
+        <div class="dept-desc">Expert diagnosis and treatment of brain & nervous system</div>
+        <span class="dept-count badge badge-primary">8 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="dept-icon icon-orange"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg></div>
+        <div class="dept-name">Orthopedics</div>
+        <div class="dept-desc">Joint replacement, spine surgery and sports medicine</div>
+        <span class="dept-count badge badge-primary">10 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="150">
+        <div class="dept-icon icon-green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="dept-name">Oncology</div>
+        <div class="dept-desc">Comprehensive cancer care with latest chemotherapy & radiation</div>
+        <span class="dept-count badge badge-primary">15 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="dept-icon icon-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <div class="dept-name">Pediatrics</div>
+        <div class="dept-desc">Dedicated children's care with child-friendly environment</div>
+        <span class="dept-count badge badge-primary">9 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="250">
+        <div class="dept-icon icon-purple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg></div>
+        <div class="dept-name">Gynecology</div>
+        <div class="dept-desc">Women's health, obstetrics and maternity care</div>
+        <span class="dept-count badge badge-primary">11 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="dept-icon icon-green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="dept-name">Emergency Medicine</div>
+        <div class="dept-desc">24/7 critical care and trauma management</div>
+        <span class="dept-count badge badge-primary">20 Doctors</span>
+      </div>
+      <div class="dept-card" data-aos="zoom-in" data-aos-delay="350">
+        <div class="dept-icon icon-orange"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="dept-name">Ophthalmology</div>
+        <div class="dept-desc">Advanced eye care, LASIK and cataract surgeries</div>
+        <span class="dept-count badge badge-primary">6 Doctors</span>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="pages/departments.html" class="btn btn-outline btn-lg">
+        View All 25+ Departments
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DOCTORS ───────────────────────────────────────────── -->
+<section id="doctors" class="section" aria-label="Our Doctors">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Meet Our Team
+      </span>
+      <h2 class="section-title">World-Class <span>Physicians</span></h2>
+      <p class="section-subtitle">Our team of distinguished doctors bring decades of expertise, compassion and a commitment to exceptional patient outcomes.</p>
+    </div>
+
+    <div class="doctors-grid">
+      <!-- Doctor 1 -->
+      <article class="doctor-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="doctor-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop&crop=face" alt="Dr. Arjun Sharma" class="doctor-card-img" loading="lazy" />
+          <div class="doctor-card-overlay">
+            <div class="doctor-card-social">
+              <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            </div>
+          </div>
+          <div class="doctor-badge"><span class="dot"></span> Available</div>
+        </div>
+        <div class="doctor-card-body">
+          <div class="doctor-name">Dr. Arjun Sharma</div>
+          <div class="doctor-spec">Senior Cardiologist</div>
+          <div class="doctor-qual">MBBS, MD (Cardiology), DM — AIIMS New Delhi</div>
+          <div class="doctor-meta">
+            <div class="doctor-exp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              22+ Years
+            </div>
+            <div class="doctor-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              4.9
+            </div>
+          </div>
+          <div class="doctor-languages">
+            <span class="doctor-lang-tag">English</span>
+            <span class="doctor-lang-tag">Hindi</span>
+            <span class="doctor-lang-tag">Telugu</span>
+          </div>
+          <a href="pages/appointment.html?doctor=Dr.+Arjun+Sharma&dept=Cardiology" class="doctor-card-btn">Book Appointment</a>
+        </div>
+      </article>
+
+      <!-- Doctor 2 -->
+      <article class="doctor-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="doctor-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop&crop=face" alt="Dr. Priya Nair" class="doctor-card-img" loading="lazy" />
+          <div class="doctor-card-overlay">
+            <div class="doctor-card-social">
+              <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            </div>
+          </div>
+          <div class="doctor-badge"><span class="dot"></span> Available</div>
+        </div>
+        <div class="doctor-card-body">
+          <div class="doctor-name">Dr. Priya Nair</div>
+          <div class="doctor-spec">Neurologist & Stroke Specialist</div>
+          <div class="doctor-qual">MBBS, MD, DM (Neurology) — PGI Chandigarh</div>
+          <div class="doctor-meta">
+            <div class="doctor-exp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>18+ Years</div>
+            <div class="doctor-rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.8</div>
+          </div>
+          <div class="doctor-languages"><span class="doctor-lang-tag">English</span><span class="doctor-lang-tag">Malayalam</span><span class="doctor-lang-tag">Hindi</span></div>
+          <a href="pages/appointment.html?doctor=Dr.+Priya+Nair&dept=Neurology" class="doctor-card-btn">Book Appointment</a>
+        </div>
+      </article>
+
+      <!-- Doctor 3 -->
+      <article class="doctor-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="doctor-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&crop=face" alt="Dr. Ravi Kumar" class="doctor-card-img" loading="lazy" />
+          <div class="doctor-card-overlay">
+            <div class="doctor-card-social">
+              <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            </div>
+          </div>
+          <div class="doctor-badge"><span class="dot"></span> Available</div>
+        </div>
+        <div class="doctor-card-body">
+          <div class="doctor-name">Dr. Ravi Kumar</div>
+          <div class="doctor-spec">Orthopedic Surgeon</div>
+          <div class="doctor-qual">MBBS, MS (Ortho), Fellowship (USA)</div>
+          <div class="doctor-meta">
+            <div class="doctor-exp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>20+ Years</div>
+            <div class="doctor-rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9</div>
+          </div>
+          <div class="doctor-languages"><span class="doctor-lang-tag">English</span><span class="doctor-lang-tag">Hindi</span><span class="doctor-lang-tag">Tamil</span></div>
+          <a href="pages/appointment.html?doctor=Dr.+Ravi+Kumar&dept=Orthopedics" class="doctor-card-btn">Book Appointment</a>
+        </div>
+      </article>
+
+      <!-- Doctor 4 -->
+      <article class="doctor-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="doctor-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop&crop=face" alt="Dr. Deepa Srinivasan" class="doctor-card-img" loading="lazy" />
+          <div class="doctor-card-overlay">
+            <div class="doctor-card-social">
+              <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            </div>
+          </div>
+          <div class="doctor-badge"><span class="dot"></span> Available</div>
+        </div>
+        <div class="doctor-card-body">
+          <div class="doctor-name">Dr. Deepa Srinivasan</div>
+          <div class="doctor-spec">Senior Gynaecologist & Obstetrician</div>
+          <div class="doctor-qual">MBBS, MD, FRCOG — CMC Vellore</div>
+          <div class="doctor-meta">
+            <div class="doctor-exp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>16+ Years</div>
+            <div class="doctor-rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.8</div>
+          </div>
+          <div class="doctor-languages"><span class="doctor-lang-tag">English</span><span class="doctor-lang-tag">Tamil</span><span class="doctor-lang-tag">Hindi</span></div>
+          <a href="pages/appointment.html?doctor=Dr.+Deepa+Srinivasan&dept=Gynecology" class="doctor-card-btn">Book Appointment</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="pages/doctors.html" class="btn btn-primary btn-lg">
+        Meet All 200+ Doctors
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EMERGENCY BANNER ───────────────────────────────────── -->
+<div class="emergency-section" aria-label="Emergency Services">
+  <div class="container">
+    <div class="emergency-inner">
+      <div class="emergency-left">
+        <div class="emergency-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <span class="emergency-tag">24 × 7 Emergency</span>
+          <div class="emergency-title">Medical Emergency? We're Ready.</div>
+          <div class="emergency-desc">Our trauma team is always on standby. Don't wait — call us immediately.</div>
+        </div>
+      </div>
+      <div class="emergency-right">
+        <div class="emergency-number">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>
+          1800-000-0000
+        </div>
+        <a href="tel:+911800000000" class="emergency-call-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg>
+          Call Now — Free Emergency
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── STATISTICS ────────────────────────────────────────── -->
+<section class="stats-section" aria-label="Hospital Statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <div class="stat-number"><span class="counter-number" data-counter="200" data-suffix="+">0</span></div>
+        <div class="stat-label">Expert Doctors</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65L12 21.23l8.42-8.42a5.4 5.4 0 0 0 0-7.23z"/></svg></div>
+        <div class="stat-number"><span class="counter-number" data-counter="50000" data-suffix="+">0</span></div>
+        <div class="stat-label">Happy Patients</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="stat-number"><span class="counter-number" data-counter="25" data-suffix="+">0</span></div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="stat-number"><span class="counter-number" data-counter="148" data-suffix="+">0</span></div>
+        <div class="stat-label">National Awards</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ──────────────────────────────────────── -->
+<section id="testimonials" class="section" aria-label="Patient Testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge accent">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Patient Stories
+      </span>
+      <h2 class="section-title">What Our <span>Patients Say</span></h2>
+      <p class="section-subtitle">Real stories from real patients who experienced our world-class care.</p>
+    </div>
+
+    <div class="testimonials-wrapper">
+      <div id="testimonials-track" class="testimonials-track">
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></div>
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"After my heart surgery at Ruksana Medical Trust, I feel like I have a second life. Dr. Sharma and his team were exceptional — professional, caring and extremely skilled. The ICU care was outstanding and the recovery process was smoother than I imagined."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Rajesh Malhotra" class="testimonial-img" loading="lazy" />
+            <div class="testimonial-author-info">
+              <h5>Rajesh Malhotra</h5>
+              <span>Mumbai, Maharashtra</span>
+            </div>
+            <span class="testimonial-dept">Cardiology</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></div>
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"The maternity care I received was truly world-class. Dr. Deepa Srinivasan guided me through every step of my pregnancy with such warmth and expertise. My delivery was smooth and my baby is healthy and happy. I cannot thank the team enough!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Anita Krishnamurthy" class="testimonial-img" loading="lazy" />
+            <div class="testimonial-author-info">
+              <h5>Anita Krishnamurthy</h5>
+              <span>Chennai, Tamil Nadu</span>
+            </div>
+            <span class="testimonial-dept">Gynecology</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></div>
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"My total knee replacement was performed flawlessly by Dr. Ravi Kumar. I was back on my feet within days — literally! The physiotherapy team was also incredible. This hospital sets a gold standard in orthopaedic care. Highly recommended."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Subramaniam Iyer" class="testimonial-img" loading="lazy" />
+            <div class="testimonial-author-info">
+              <h5>Subramaniam Iyer</h5>
+              <span>Hyderabad, Telangana</span>
+            </div>
+            <span class="testimonial-dept">Orthopedics</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></div>
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"From diagnosis to full remission, the oncology team at Ruksana Medical Trust walked every step with us. Dr. Suresh Mehta's expertise and the nursing staff's warmth made an incredibly difficult journey bearable. They didn't just treat cancer — they treated our whole family."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Vikram Desai" class="testimonial-img" loading="lazy" />
+            <div class="testimonial-author-info">
+              <h5>Vikram Desai</h5>
+              <span>Bengaluru, Karnataka</span>
+            </div>
+            <span class="testimonial-dept">Oncology</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></div>
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"The paediatric team handled my 4-year-old son with such gentleness. Dr. Ananya made the whole experience stress-free for both my son and me. The child-friendly wards, the playroom, the attentive nursing staff — everything was perfect."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face" alt="Meena Pillai" class="testimonial-img" loading="lazy" />
+            <div class="testimonial-author-info">
+              <h5>Meena Pillai</h5>
+              <span>Kochi, Kerala</span>
+            </div>
+            <span class="testimonial-dept">Pediatrics</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button id="slider-prev" class="slider-btn" aria-label="Previous testimonial">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div id="slider-dots" class="slider-dots"></div>
+      <button id="slider-next" class="slider-btn" aria-label="Next testimonial">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ────────────────────────────────────────────── -->
+<section id="gallery" class="section" aria-label="Hospital Gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Our Hospital
+      </span>
+      <h2 class="section-title">State-of-the-Art <span>Facilities</span></h2>
+      <p class="section-subtitle">A glimpse into our world-class infrastructure designed for healing, comfort and clinical excellence.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item zoom-on-hover" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop" alt="Hospital Exterior" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Hospital Exterior</span></div>
+      </div>
+      <div class="gallery-item zoom-on-hover" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop" alt="Modern ICU" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Modern ICU</span></div>
+      </div>
+      <div class="gallery-item zoom-on-hover" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=400&h=300&fit=crop" alt="Operation Theatre" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Operation Theatre</span></div>
+      </div>
+      <div class="gallery-item zoom-on-hover" data-aos="fade-up" data-aos-delay="50">
+        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=250&fit=crop" alt="Premium Patient Rooms" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Premium Patient Rooms</span></div>
+      </div>
+      <div class="gallery-item zoom-on-hover" data-aos="fade-up" data-aos-delay="150">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop" alt="Diagnostic Lab" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Diagnostic Lab</span></div>
+      </div>
+      <div class="gallery-item zoom-on-hover" data-aos="fade-left">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop" alt="Reception & Lobby" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Reception & Lobby</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ───────────────────────────────────────────────── -->
+<section id="faq" class="section" aria-label="Frequently Asked Questions">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        FAQ
+      </span>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <p class="section-subtitle">Everything you need to know about our hospital, services and appointment process.</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">How do I book an appointment at Ruksana Medical Trust?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>You can book an appointment through our website's appointment page, by calling our helpline 1800-000-0000, via WhatsApp, or by visiting the hospital directly. Online booking is available 24/7 and you'll receive a confirmation call within 2 hours.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Does Ruksana Medical Trust offer emergency services?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>Yes, our Emergency Department operates 24 hours a day, 7 days a week, 365 days a year. We have a dedicated trauma centre, ICU and critical care unit staffed by experienced emergency medicine specialists. Call 1800-000-0000 for emergencies.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Which insurance plans are accepted at Ruksana Medical Trust?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>We accept all major insurance providers including Star Health, HDFC ERGO, Bajaj Allianz, ICICI Lombard, New India Assurance, United India Insurance, and more. We also accept Ayushman Bharat PMJAY. Please contact our billing department for specific queries about your coverage.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">What are the visiting hours for inpatients?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>General visiting hours are 9:00 AM – 12:00 PM and 4:00 PM – 8:00 PM. ICU visiting is limited to 15 minutes twice daily (10:00 AM and 5:00 PM). One visitor is permitted at a time in ICU areas. Please carry a valid ID for entry.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Does the hospital have pharmacy and diagnostic services?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>Yes, we have a 24/7 in-house pharmacy stocked with all essential medications. Our diagnostic centre offers comprehensive lab tests, X-ray, MRI, CT scan, ultrasound, PET-CT, echocardiography, and more. Home sample collection is also available.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Is there parking available at the hospital?</span>
+          <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </div>
+        <div class="faq-answer"><p>Yes, we have a multi-level covered parking facility with 500+ spaces. The first 2 hours are complimentary for OPD patients. Valet parking is available at the main entrance. We also provide dedicated parking for differently-abled visitors.</p></div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="pages/faq.html" class="btn btn-outline btn-lg">View All FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MAP SECTION ───────────────────────────────────────── -->
+<section id="map-section" class="section" aria-label="Hospital Location">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Find Us
+      </span>
+      <h2 class="section-title">Our <span>Location</span></h2>
+      <p class="section-subtitle">Conveniently located in the heart of the city with excellent connectivity.</p>
+    </div>
+
+    <div class="map-wrap" data-aos="zoom-in">
+      <!-- Replace src with your actual Google Maps embed URL -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3062939849287!2d78.48621307508898!3d17.44780060120793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91fa1c9ae5c9%3A0xfa08b6a0a3f7c05a!2sHyderabad%2C+Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ruksana Medical Trust Location"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT SECTION ───────────────────────────────────── -->
+<section id="contact" class="section" aria-label="Contact Us">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+        Get In Touch
+      </span>
+      <h2 class="section-title">Contact <span>Us</span></h2>
+      <p class="section-subtitle">We're here to help. Reach out through any channel that works best for you.</p>
+    </div>
+
+    <div class="contact-info-cards stagger">
+      <div class="contact-info-card">
+        <div class="contact-info-icon icon-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h4>Call Us</h4>
+        <p><a href="tel:+911800000000">1800-000-0000</a> (Toll Free)<br/><a href="tel:+914023456789">+91-40-2345-6789</a></p>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon icon-green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h4>Email Us</h4>
+        <p><a href="mailto:info@ruksanamedical.com">info@ruksanamedical.com</a><br/><a href="mailto:appointments@ruksanamedical.com">appointments@ruksanamedical.com</a></p>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon icon-orange"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>Visit Us</h4>
+        <p>1-8-123, Medical Complex,<br/>Begumpet, Hyderabad — 500016<br/>Telangana, India</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="glass-form-wrap">
+        <h3 class="form-title">Send Us a Message</h3>
+        <p class="form-subtitle">We'll respond within 24 hours</p>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name <span>*</span></label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="contact-phone" class="form-input" placeholder="10-digit mobile number" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email Address <span>*</span></label>
+            <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message <span>*</span></label>
+            <textarea id="contact-message" class="form-textarea" placeholder="How can we help you?" required rows="5"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="glass-form-wrap" style="background:var(--gradient-primary);border:none">
+          <h4 style="color:white;font-size:1.25rem;font-weight:700;margin-bottom:1.5rem">Emergency Contacts</h4>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <a href="tel:+911800000000" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:rgba(255,255,255,0.1);border-radius:12px;border:1px solid rgba(255,255,255,0.2);text-decoration:none;transition:all 0.3s" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+              <div style="width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg></div>
+              <div><div style="color:white;font-weight:700;font-size:1.1rem">1800-000-0000</div><div style="color:rgba(255,255,255,0.7);font-size:0.75rem;font-family:var(--font-secondary)">Emergency Helpline (24/7)</div></div>
+            </a>
+            <a href="https://wa.me/919000000000" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:rgba(37,211,102,0.2);border-radius:12px;border:1px solid rgba(37,211,102,0.4);text-decoration:none;transition:all 0.3s" onmouseover="this.style.background='rgba(37,211,102,0.3)'" onmouseout="this.style.background='rgba(37,211,102,0.2)'">
+              <div style="width:44px;height:44px;background:#25D366;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></div>
+              <div><div style="color:white;font-weight:700;font-size:1.1rem">WhatsApp Us</div><div style="color:rgba(255,255,255,0.7);font-size:0.75rem;font-family:var(--font-secondary)">+91-9000-000-000</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-form-wrap">
+          <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:var(--text-primary)">OPD Timings</h4>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem"><span style="color:var(--text-secondary);font-family:var(--font-secondary)">Monday – Friday</span><span style="font-weight:600;color:var(--primary)">8:00 AM – 8:00 PM</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem"><span style="color:var(--text-secondary);font-family:var(--font-secondary)">Saturday</span><span style="font-weight:600;color:var(--primary)">8:00 AM – 6:00 PM</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem"><span style="color:var(--text-secondary);font-family:var(--font-secondary)">Sunday</span><span style="font-weight:600;color:var(--accent)">Emergency Only</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem"><span style="color:var(--text-secondary);font-family:var(--font-secondary)">Emergency</span><span style="font-weight:600;color:#E53E3E">24 × 7</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────── -->
+<footer id="footer" aria-label="Footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">Ruksana Medical</span>
+              <span class="nav-logo-tagline">Your Health, Our Priority</span>
+            </div>
+          </a>
+          <p>A premier multi-speciality hospital committed to delivering world-class healthcare with compassion, integrity and innovation since 1999.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Home</a></li>
+            <li><a href="pages/about.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>About Us</a></li>
+            <li><a href="pages/doctors.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Our Doctors</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Departments</a></li>
+            <li><a href="pages/services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Services</a></li>
+            <li><a href="pages/appointment.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Departments -->
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Cardiology</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Neurology</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Orthopedics</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Oncology</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Pediatrics</a></li>
+            <li><a href="pages/departments.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Emergency Medicine</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="footer-contact-text"><strong>Address</strong><span>1-8-123, Medical Complex, Begumpet, Hyderabad — 500016</span></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg></div>
+            <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+911800000000">1800-000-0000 (Toll Free)</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/></svg></div>
+            <div class="footer-contact-text"><strong>Email</strong><a href="mailto:info@ruksanamedical.com">info@ruksanamedical.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="footer-contact-text"><strong>Emergency</strong><span style="color:#F87171">24 × 7 Open</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2025 Ruksana Medical Trust. All Rights Reserved. Designed with ♥ for better healthcare.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+        <a href="pages/contact.html">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Floating Buttons ───────────────────────────────────── -->
+<a id="whatsapp-float" href="https://wa.me/919000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<a href="tel:+911800000000" class="emergency-call-btn" aria-label="Emergency Call">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>
+  Emergency
+</a>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- ─── Scripts ────────────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="supabase/config.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/hero.js" defer></script>
+<script src="js/counter.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/contact.js" defer></script>
+
+<style>
+  /* Hero background fallback using CSS gradient when image fails */
+  .hero-bg {
+    background-image: 
+      linear-gradient(135deg, rgba(10,77,140,0.95) 0%, rgba(13,27,42,0.9) 100%),
+      url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&h=1080&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+
+</body>
+</html>
