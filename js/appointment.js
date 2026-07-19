@@ -4,6 +4,31 @@
 
 'use strict';
 
+/* ─── Make.com Webhook (Google Sheet + WhatsApp automation) ──
+   1. Make.com par scenario banao, "Custom Webhook" module add karo,
+      wahan se jo URL milega, usse neeche paste karo.
+   2. Yeh URL secret nahi hota (bas ek endpoint hai), GitHub par
+      publicly rehna theek hai.
+------------------------------------------------------------- */
+const MAKE_WEBHOOK_URL = 'PASTE_YOUR_MAKE_WEBHOOK_URL_HERE';
+
+async function sendToMakeWebhook(data) {
+  if (!MAKE_WEBHOOK_URL || MAKE_WEBHOOK_URL.includes('PASTE_YOUR')) {
+    console.warn('[RMT] Make.com webhook URL set nahi hai — Google Sheet/WhatsApp automation skip ho gaya.');
+    return;
+  }
+  try {
+    await fetch(MAKE_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch (err) {
+    // Yeh fail bhi ho jaye toh appointment booking rukni nahi chahiye
+    console.error('[RMT] Make.com webhook error:', err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', initAppointmentForm);
 
 const DEPARTMENTS = [
@@ -211,6 +236,10 @@ async function handleSubmit(e) {
     const { data: result, error } = await window.RMT_DB.submitAppointment(data);
 
     if (error) throw new Error(error.message || 'Submission failed');
+
+    // Google Sheet + WhatsApp automation (Make.com) — fire and forget,
+    // isse appointment booking fail nahi honi chahiye agar yeh error de.
+    sendToMakeWebhook(data);
 
     // Success
     window.Toast?.success('🎉 Appointment booked successfully! We\'ll confirm within 2 hours.');
