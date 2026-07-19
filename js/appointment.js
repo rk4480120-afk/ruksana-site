@@ -13,7 +13,7 @@
 const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek';
 
 async function sendToMakeWebhook(data) {
-  if (!MAKE_WEBHOOK_URL || MAKE_WEBHOOK_URL.includes('PASTE_YOUR')) {
+  if (!MAKE_WEBHOOK_URL || MAKE_WEBHOOK_URL.includes('https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek')) {
     console.warn('[RMT] Make.com webhook URL set nahi hai — Google Sheet/WhatsApp automation skip ho gaya.');
     return;
   }
