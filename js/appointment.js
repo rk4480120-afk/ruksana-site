@@ -10,7 +10,7 @@
    2. Yeh URL secret nahi hota (bas ek endpoint hai), GitHub par
       publicly rehna theek hai.
 ------------------------------------------------------------- */
-const MAKE_WEBHOOK_URL = 'PASTE_YOUR_MAKE_WEBHOOK_URL_HERE';
+const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek';
 
 async function sendToMakeWebhook(data) {
   if (!MAKE_WEBHOOK_URL || MAKE_WEBHOOK_URL.includes('PASTE_YOUR')) {
