@@ -1,53 +1,41 @@
-var POST_URL = "https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek";
+document.getElementById("appointmentForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // page reload rokne ke liye
 
-function onSubmit(e) {
-  var form = FormApp.getActiveForm();
-  var allResponses = form.getResponses();
-  var latestResponse = allResponses[allResponses.length - 1];
-  var itemResponses = latestResponse.getItemResponses();
+  var mobile = document.getElementById("mobileNumber").value.replace(/\D/g, "");
+  if (mobile.length === 10) mobile = "91" + mobile;
 
-  // Raw answers ko title ke basis pe collect kar lo
-  var raw = {};
-  for (var i = 0; i < itemResponses.length; i++) {
-    var question = itemResponses[i].getItem().getTitle().trim();
-    var answer = itemResponses[i].getResponse();
-    raw[question] = answer;
-  }
-
-  // Mobile number ko clean karke +91 format mein laao
-  var rawMobile = (raw["Mobile Number"] || "").toString().replace(/\D/g, "");
-  if (rawMobile.length === 10) {
-    rawMobile = "91" + rawMobile;
-  } else if (rawMobile.length === 11 && rawMobile.charAt(0) === "0") {
-    rawMobile = "91" + rawMobile.substring(1);
-  }
-  // agar already 91 se start ho raha hai (12 digit) to as-is chhod do
-
-  // Final clean payload — fixed keys jo Make.com scenario expect karta hai
   var payload = {
-    fullName: raw["Full Name"] || "",
-    mobileNumber: rawMobile,
-    email: raw["Email Address"] || "",
-    age: raw["Age"] || "",
-    gender: raw["Gender"] || "",
-    department: raw["Department"] || "",
-    preferredDoctor: raw["Preferred Doctor"] || "",
-    preferredDate: raw["Preferred Date"] || "",
-    preferredTime: raw["Preferred Time"] || "",
-    problemDescription: raw["Describe Your Problem"] || "",
+    fullName: document.getElementById("fullName").value,
+    mobileNumber: mobile,
+    email: document.getElementById("email").value,
+    age: document.getElementById("age").value,
+    gender: document.getElementById("gender").value,
+    department: document.getElementById("department").value,
+    preferredDoctor: document.getElementById("preferredDoctor").value,
+    preferredDate: document.getElementById("preferredDate").value,
+    preferredTime: document.getElementById("preferredTime").value,
+    problemDescription: document.getElementById("problem").value,
     submittedAt: new Date().toISOString()
   };
 
-  var options = {
-    method: "post",
-    contentType: "application/json",
-    payload: JSON.stringify(payload),
-    muteHttpExceptions: true
-  };
+  try {
+    const response = await fetch("https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
 
-  var response = UrlFetchApp.fetch(POST_URL, options);
-  Logger.log(response.getContentText()); // debugging ke liye
-}
+    if (response.ok) {
+      alert("Appointment confirmed! Hum jald hi aapse contact karenge.");
+      document.getElementById("appointmentForm").reset();
+    } else {
+      alert("Kuch gadbad ho gayi, dobara try karein.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Network error, please try again.");
+  }
+});
 
 document.addEventListener('DOMContentLoaded', initAppointmentForm);
 
