@@ -1,32 +1,52 @@
-/* ============================================================
-   APPOINTMENT.JS — Form validation, submission, Supabase
-   ============================================================ */
+var POST_URL = "https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek";
 
-'use strict';
+function onSubmit(e) {
+  var form = FormApp.getActiveForm();
+  var allResponses = form.getResponses();
+  var latestResponse = allResponses[allResponses.length - 1];
+  var itemResponses = latestResponse.getItemResponses();
 
-/* ─── Make.com Webhook (Google Sheet + WhatsApp automation) ──
-   1. Make.com par scenario banao, "Custom Webhook" module add karo,
-      wahan se jo URL milega, usse neeche paste karo.
-   2. Yeh URL secret nahi hota (bas ek endpoint hai), GitHub par
-      publicly rehna theek hai.
-------------------------------------------------------------- */
-const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek';
-
-async function sendToMakeWebhook(data) {
-  if (!MAKE_WEBHOOK_URL || MAKE_WEBHOOK_URL.includes('https://hook.eu1.make.com/888h9iyypt0e4lakd9n1n534vsacqfek')) {
-    console.warn('[RMT] Make.com webhook URL set nahi hai — Google Sheet/WhatsApp automation skip ho gaya.');
-    return;
+  // Raw answers ko title ke basis pe collect kar lo
+  var raw = {};
+  for (var i = 0; i < itemResponses.length; i++) {
+    var question = itemResponses[i].getItem().getTitle().trim();
+    var answer = itemResponses[i].getResponse();
+    raw[question] = answer;
   }
-  try {
-    await fetch(MAKE_WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-  } catch (err) {
-    // Yeh fail bhi ho jaye toh appointment booking rukni nahi chahiye
-    console.error('[RMT] Make.com webhook error:', err);
+
+  // Mobile number ko clean karke +91 format mein laao
+  var rawMobile = (raw["Mobile Number"] || "").toString().replace(/\D/g, "");
+  if (rawMobile.length === 10) {
+    rawMobile = "91" + rawMobile;
+  } else if (rawMobile.length === 11 && rawMobile.charAt(0) === "0") {
+    rawMobile = "91" + rawMobile.substring(1);
   }
+  // agar already 91 se start ho raha hai (12 digit) to as-is chhod do
+
+  // Final clean payload — fixed keys jo Make.com scenario expect karta hai
+  var payload = {
+    fullName: raw["Full Name"] || "",
+    mobileNumber: rawMobile,
+    email: raw["Email Address"] || "",
+    age: raw["Age"] || "",
+    gender: raw["Gender"] || "",
+    department: raw["Department"] || "",
+    preferredDoctor: raw["Preferred Doctor"] || "",
+    preferredDate: raw["Preferred Date"] || "",
+    preferredTime: raw["Preferred Time"] || "",
+    problemDescription: raw["Describe Your Problem"] || "",
+    submittedAt: new Date().toISOString()
+  };
+
+  var options = {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify(payload),
+    muteHttpExceptions: true
+  };
+
+  var response = UrlFetchApp.fetch(POST_URL, options);
+  Logger.log(response.getContentText()); // debugging ke liye
 }
 
 document.addEventListener('DOMContentLoaded', initAppointmentForm);
